@@ -1,20 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react'
+import './pokemon.css'
 
-class Pokemon extends React.Component {
+export default class Pokemon extends Component {
     render() {
-        const { name, type, averageWeight, image } = this.props.pokemon;
-
+        const { name, type, averageWeight, image, moreInfo } = this.props.pokemon
         return (
             <div className="pokemon">
                 <div>
-                    <p> {name} </p>
-                    <p> {type} </p>
-                    <p> {`Average weight: ${averageWeight.value} ${averageWeight.measurementUnit}`}</p>
+                <p>{name}</p>
+                <p>{type}</p>
+                <p>{averageWeight.value} {averageWeight.measurementUnit}</p>
+                <p><a href={moreInfo}>info</a></p>
                 </div>
-                <img src={image} alt={`${name} sprite`} />
+                <img src={image} alt={`${image} sprite`}/>
             </div>
-        );
+        )
     }
 }
-
-export default Pokemon;

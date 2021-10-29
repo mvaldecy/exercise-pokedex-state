@@ -1,0 +1,15 @@
+.pokemon {
+    align-items: center;
+    border-radius: 10px;
+    border: 1px gray solid;
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 250px;
+    width: auto
+  }
+
+  img {
+    width: 100px;
+    border: 1px solid;
+    border-radius: 20px;
+  }
